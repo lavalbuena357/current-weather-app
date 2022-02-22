@@ -15,10 +15,13 @@ function Card(props) {
           <span>Min: {props.temp_min}°</span>
           <span>max: {props.temp_max}°</span>
         </div>
-        <div>
-          <img src={`http://openweathermap.org/img/wn/${props.icon}@2x.png`} alt='' />
-          <span>{props.weather}</span>
-        </div>
+      </div>
+      <div>
+        <img src={`http://openweathermap.org/img/wn/${props.icon}@2x.png`} alt='' />
+        <span>{props.weather}</span>
+      </div>
+      <div>
+        <button onClick={props.handleDetail}>Ver detalle</button>
       </div>
     </div>
   )

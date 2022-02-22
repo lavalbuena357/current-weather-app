@@ -1,15 +1,22 @@
 import React from 'react'
 import Card from '../Card/Card'
 import { useSelector, useDispatch } from 'react-redux'
-import { updateCities } from '../../Redux/actions'
+import { useNavigate } from 'react-router-dom'
+import { cityDetail, updateCities } from '../../Redux/actions'
 
 function Cards() {
 
   const cities = useSelector(state => state.cities)
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   function handleClose(id) {
     dispatch(updateCities(id))
+  }
+
+  function handleDetail(id) {
+    dispatch(cityDetail(id))
+    navigate(`/${id}`)
   }
 
   return (
@@ -21,6 +28,7 @@ function Cards() {
             country={el.sys.country} 
             city={el.name} 
             handleClose={() => handleClose(el.id)} 
+            handleDetail={() => handleDetail(el.id)}
             temp={el.main.temp}
             temp_min={el.main.temp_min}
             temp_max={el.main.temp_max}
