@@ -25,7 +25,7 @@ function Cards() {
             temp_min={el.main.temp_min}
             temp_max={el.main.temp_max}
             icon={el.weather[0].icon}
-            weather={el.weather[0].main}
+            weather={el.weather[0].description}
           />
         ))
       }
