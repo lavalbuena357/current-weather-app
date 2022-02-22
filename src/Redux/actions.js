@@ -14,3 +14,10 @@ export function getCityByName(name) {
     } catch (error) {console.log(error)}
   }
 }
+
+export function updateCities(id) {
+  return {
+    type: "UPDATE_CITIES",
+    payload: id
+  }
+}
