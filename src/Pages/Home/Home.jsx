@@ -1,8 +1,13 @@
 import React from 'react'
+import SearchBar from '../../Components/SearchBar/SearchBar'
+import Cards from '../../Components/Cards/Cards'
 
 function Home() {
   return (
-    <div>Home</div>
+    <div>
+      <SearchBar />
+      <Cards />
+    </div>
   )
 }
 
