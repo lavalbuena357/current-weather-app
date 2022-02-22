@@ -21,3 +21,15 @@ export function updateCities(id) {
     payload: id
   }
 }
+
+export function cityDetail(id) {
+  return async function(dispatch) {
+    try {
+      const detail = await axios.get(`${url}?id=${id}&lang=es&appid=${apikey}`)
+      dispatch({
+        type: "CITY_DETAIL",
+        payload: detail.data
+      })
+    } catch (error) {console.log(error)}
+  }
+}
