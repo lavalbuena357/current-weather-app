@@ -1,13 +1,15 @@
 import React from 'react'
 import Card from '../Card/Card'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { updateCities } from '../../Redux/actions'
 
 function Cards() {
 
   const cities = useSelector(state => state.cities)
+  const dispatch = useDispatch()
 
   function handleClose(id) {
-    console.log(id)
+    dispatch(updateCities(id))
   }
 
   return (
@@ -18,7 +20,7 @@ function Cards() {
             key={i} 
             country={el.sys.country} 
             city={el.name} 
-            handleClose={() => handleClose(el.sys.id)} 
+            handleClose={() => handleClose(el.id)} 
             temp={el.main.temp}
             temp_min={el.main.temp_min}
             temp_max={el.main.temp_max}
