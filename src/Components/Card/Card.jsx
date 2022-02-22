@@ -16,7 +16,7 @@ function Card(props) {
           <span>max: {props.temp_max}°</span>
         </div>
         <div>
-          <img src={`http://openweathermap.org/img/wn/${props.icon}@2x.png`} />
+          <img src={`http://openweathermap.org/img/wn/${props.icon}@2x.png`} alt='' />
           <span>{props.weather}</span>
         </div>
       </div>
