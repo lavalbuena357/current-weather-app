@@ -6,7 +6,7 @@ const apikey = process.env.REACT_APP_API_KEY
 export function getCityByName(name) {
   return async function(dispatch) {
     try {
-      const city = await axios.get(`${url}?q=${name}&lang=es&appid=${apikey}`)
+      const city = await axios.get(`${url}?q=${name}&lang=es&units=metric&appid=${apikey}`)
       dispatch({
         type: "GET_CITY",
         payload: city.data
