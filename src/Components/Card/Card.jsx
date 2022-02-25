@@ -1,28 +1,37 @@
 import React from 'react'
+import { IoWater, IoCloud } from "react-icons/io5";
 
 function Card(props) {
 
   return (
     <div>
-      <div>
-        <h3>{props.country}</h3>
-        <h2>{props.city}</h2>
-        <span onClick={props.handleClose} >x</span>
-      </div>
-      <div>
-        <h2>{props.temp}°</h2>
-        <div>
-          <span>Min: {props.temp_min}°</span>
-          <span>max: {props.temp_max}°</span>
-        </div>
+      <div onClick={props.handleClose}>
+          x
       </div>
       <div>
         <img src={`http://openweathermap.org/img/wn/${props.icon}@2x.png`} alt='' />
-        <span>{props.weather}</span>
       </div>
       <div>
-        <button onClick={props.handleDetail}>Ver detalle</button>
+        <div>
+          <span>{props.country} - {props.city}</span>
+        </div>
+        <div>
+          <span>{Math.round(props.temp)}°</span>
+          <span>{props.weather}</span>
+        </div>
+      </div>  
+      <div>
+        <div>
+          <IoWater />
+          <span>{props.humidity}%</span>
+        </div>
+        <div>
+          <IoCloud />
+          <span>{props.clouds}%</span>
+        </div>
       </div>
+      <div onClick={props.handleDetail}>det</div>
+    
     </div>
   )
 }
