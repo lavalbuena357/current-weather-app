@@ -25,7 +25,7 @@ export function updateCities(id) {
 export function cityDetail(id) {
   return async function(dispatch) {
     try {
-      const detail = await axios.get(`${url}?id=${id}&lang=es&appid=${apikey}`)
+      const detail = await axios.get(`${url}?id=${id}&lang=es&units=metric&appid=${apikey}`)
       dispatch({
         type: "CITY_DETAIL",
         payload: detail.data
