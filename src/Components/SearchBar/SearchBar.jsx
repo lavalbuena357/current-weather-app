@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getCityByName } from '../../Redux/actions'
-import { normalize } from '../utils/normalize'
+import { normalize } from '../../utils/normalize'
 
 function SearchBar() {
   const [repeatedCity, setRepeatedCity] = useState(false)
