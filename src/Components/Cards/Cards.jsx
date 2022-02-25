@@ -30,10 +30,10 @@ function Cards() {
             handleClose={() => handleClose(el.id)} 
             handleDetail={() => handleDetail(el.id)}
             temp={el.main.temp}
-            temp_min={el.main.temp_min}
-            temp_max={el.main.temp_max}
             icon={el.weather[0].icon}
             weather={el.weather[0].description}
+            humidity={el.main.humidity}
+            clouds={el.clouds.all}
           />
         ))
       }
