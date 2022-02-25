@@ -6,7 +6,7 @@ const initialState = {
 function reducer(state = initialState, action) {
   switch(action.type) {
     case "GET_CITY":
-      return {...state, cities: [...state.cities, action.payload]}
+      return {...state, cities: [action.payload, ...state.cities]}
     case "UPDATE_CITIES":
       const citiesFilter = state.cities.filter(el => el.id !== action.payload)
       return {...state, cities: citiesFilter}
