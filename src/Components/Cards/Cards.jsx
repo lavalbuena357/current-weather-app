@@ -14,8 +14,8 @@ function Cards() {
     dispatch(updateCities(id))
   }
 
-  function handleDetail(id) {
-    dispatch(cityDetail(id))
+  async function handleDetail(id) {
+    await dispatch(cityDetail(id))
     navigate(`/${id}`)
   }
 
