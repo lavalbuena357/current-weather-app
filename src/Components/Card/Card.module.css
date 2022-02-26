@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  margin: 10px 0;
+  margin: 10px;
   user-select: none;
   background-color: #2a3850;
   border-radius: 8px;
@@ -21,8 +21,12 @@
   align-items: center;
 }
 
+.imgCtn img {
+  width: 80px;
+}
+
 .midItemsCtn {
-  width: 220px;
+  width: 130px;
 }
 
 .midItemsCtn, .lastItemsCtn {
@@ -30,6 +34,7 @@
   flex-direction: column;
   justify-content: center;
   margin: 0 10px;
+  font-size: 0.8rem;
 }
 
 .midItem span {
@@ -37,7 +42,7 @@
 }
 
 .lastItem {
-  width: 70px;
+  width: 60px;
 }
 
 .lastItem svg {
