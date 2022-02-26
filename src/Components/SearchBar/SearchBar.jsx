@@ -1,16 +1,14 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { firstCard, getCityByName } from '../../Redux/actions'
-import { normalize } from '../../utils/normalize'
 import style from './SearchBar.module.css'
 
 function SearchBar() {
-  const [repeatedCity, setRepeatedCity] = useState(false)
 
   //despachar acciones para busqueda
   const dispatch = useDispatch()
   //consultar el estado global
-  const cities = useSelector(state => state.cities)
+  const repeatedCity = useSelector(state => state.repeatedCity)
   //hacer referencia a lo que el usuario ingresa en el input
   const cityRef = useRef()
 
@@ -18,19 +16,10 @@ function SearchBar() {
     e.preventDefault()
     //destructuracion de la referencia
     const { value } = cityRef.current
-
-    //setear ciudad repetida en falso en cada busqueda para evitar que quede activo siempre
-    setRepeatedCity(false)
-    //filtrado para verificar si la ciudad existe - funcion para poner ambos textos iguales sin tildes ni mayusculas
-    const checkExist = cities.filter(el => normalize(el.name) === normalize(value))
-    if(checkExist.length === 0) {
-      await dispatch(getCityByName(value))
-      await dispatch(firstCard())
-      cityRef.current.value = ""
-    } else {
-      //si la ciudad ya existe activar el trigger para mostrar el mensaje
-      setRepeatedCity(true)
-    }
+    
+    await dispatch(getCityByName(value))
+    await dispatch(firstCard())
+    cityRef.current.value = ""
   }
   
   return (
