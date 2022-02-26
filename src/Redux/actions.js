@@ -15,6 +15,12 @@ export function getCityByName(name) {
   }
 }
 
+export function firstCard() {
+  return {
+    type: "FIRST_CARD"
+  }
+}
+
 export function updateCities(id) {
   return {
     type: "UPDATE_CITIES",
