@@ -3,6 +3,8 @@ import Card from '../Card/Card'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { cityDetail, updateCities } from '../../Redux/actions'
+import style from './Cards.module.css'
+import FirstCard from '../FirstCard/FirstCard'
 
 function Cards() {
 
@@ -20,9 +22,12 @@ function Cards() {
   }
 
   return (
-    <div>
+    <div className={style.container}>
+      <FirstCard />
+      <div className={style.cards}>
       {
         cities.map((el, i) => (
+          i > 0 &&
           <Card 
             key={i} 
             country={el.sys.country} 
@@ -37,6 +42,7 @@ function Cards() {
           />
         ))
       }
+      </div>
     </div>
   )
 }
