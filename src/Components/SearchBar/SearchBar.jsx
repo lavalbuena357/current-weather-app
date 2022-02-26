@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getCityByName } from '../../Redux/actions'
 import { normalize } from '../../utils/normalize'
+import style from './SearchBar.module.css'
 
 function SearchBar() {
   const [repeatedCity, setRepeatedCity] = useState(false)
@@ -33,11 +34,13 @@ function SearchBar() {
   
   return (
     <div>
-      <form onSubmit={handleAdd}>
-        <input ref={cityRef} type="text" placeholder='Buscar ciudad por nombre...' required />
-        <input type="submit" value="Agregar" />
-      </form>
-      {repeatedCity && <span>La ciudad que busca ya ha sido agregada</span>}
+      <div className={style.formCtn}>
+        <form onSubmit={handleAdd}>
+          <input className={style.inputsearch} ref={cityRef} type="text" placeholder='Buscar ciudad por nombre...' required />
+          <input className={style.btnSubmit} type="submit" value='+' />
+        </form>
+      </div>
+      {repeatedCity && <span className={style.alertMsg}>*La ciudad que busca ya ha sido agregada</span>}
     </div>
   )
 }
