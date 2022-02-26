@@ -1,13 +1,19 @@
 const initialState = {
   cities: [],
   detail: null,
-  fisrtCard: null
+  fisrtCard: null,
+  repeatedCity: false
 }
 
 function reducer(state = initialState, action) {
   switch(action.type) {
     case "GET_CITY":
-      return {...state, cities: [action.payload, ...state.cities]}
+      const city = state.cities.filter(el => el.name === action.payload.name)
+      if(city.length === 0) {
+        return {...state, cities: [action.payload, ...state.cities], repeatedCity: false}
+      } else {
+        return {...state, repeatedCity: true}
+      }
     case "FIRST_CARD": 
     return {...state, fisrtCard: state.cities[0]}
     case "UPDATE_CITIES":
