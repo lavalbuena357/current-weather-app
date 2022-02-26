@@ -22,7 +22,7 @@
 }
 
 .midItemsCtn {
-  min-width: 200px;
+  width: 220px;
 }
 
 .midItemsCtn, .lastItemsCtn {
@@ -34,6 +34,10 @@
 
 .midItem span {
   margin-right: 8px;
+}
+
+.lastItem {
+  width: 70px;
 }
 
 .lastItem svg {
