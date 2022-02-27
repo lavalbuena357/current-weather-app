@@ -1,0 +1,83 @@
+.container {
+  margin: 20px;
+}
+
+.cardCtn {
+  display: flex;
+  align-items: center;
+}
+
+.leftCtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+}
+
+.nameCtn {
+  display: flex;
+  align-items: center;
+}
+
+.nameCtn h3 {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.nameCtn svg {
+  margin-right: 5px;
+}
+
+.tempCtn {
+  display: flex;
+  align-items: center;
+}
+
+.tempCtn p {
+  font-size: 3rem;
+}
+
+.tempCtn img {
+  width: 60px;
+}
+
+.descripCtn {
+  font-size: 0.8rem;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.rightCtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.cardSup, .cardInf {
+  display: flex;
+  background-color: #2a3850;
+  margin: 5px 20px;
+  padding: 10px;
+}
+
+.block1, .block2, .block3, .block4 {
+  display: flex;
+  align-items: center;
+  margin: 0 5px;
+}
+
+.block2 {
+  border-left: 2px solid rgba(255, 255, 255, 0.494);
+  border-right: 2px solid rgba(255, 255, 255, 0.494);
+  padding: 0 10px;
+}
+
+.block1 svg, .block2 svg, .block3 svg {
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.block4 svg {
+  font-size: 2.5rem;
+}
