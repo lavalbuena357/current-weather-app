@@ -1,0 +1,140 @@
+.container {
+  display: flex;
+  margin: 20px;
+  padding: 20px;
+}
+
+.backCtn {
+  width: 25px;
+  background-color: rgb(13, 189, 220);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backCtn svg {
+  font-size: 1.2rem;
+}
+
+.cardCtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 20px;
+  user-select: none;
+}
+
+.infoCtn {
+  display: flex;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.433);
+}
+
+.leftCtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+.leftCtn svg {
+  margin-bottom: 10px;
+  font-size: 1.7rem;
+}
+
+.leftCtn p {
+  font-size: 2rem;
+}
+
+.blockRight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.blockRight p {
+  font-size: 0.8rem;
+}
+
+.blockRight svg {
+  margin-right: 10px;
+}
+
+.tempCtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.mainTempCtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainTempCtn svg {
+  font-size: 3rem;
+  color:  orange;
+  margin-right: 10px;
+}
+
+.mainTempCtn p {
+  font-size: 6rem;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.minMaxCtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.minMaxCtn p:first-child {
+  color: rgb(13, 189, 220);
+}
+
+.minMaxCtn p:last-child {
+  color: orange;
+}
+
+.imageTempCtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageTempCtn img {
+background-color: #2a3850;
+}
+
+.imageTempCtn p {
+  text-transform: capitalize;
+}
+
+.moreInfoCtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  user-select: none;
+}
+
+.moreInfoCtn p {
+  background-color: #2a3850;
+  width: 100%;
+  padding: 5px 15px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.moreInfoCtn p svg {
+  margin-right: 8px;
+  font-size: 2rem;
+}
