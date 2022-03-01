@@ -13,3 +13,19 @@
   font-size: 1.2rem;
   color: aqua;
 }
+
+@media only screen and (max-width: 650px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width:436px) {
+  .container h2 {
+    font-size: 1rem;
+    text-align: center;
+  }
+}

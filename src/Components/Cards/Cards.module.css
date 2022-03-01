@@ -10,3 +10,28 @@
   align-items: flex-start;
   flex-wrap: wrap;
 }
+
+@media only screen and (max-width: 809px) {
+  .container {
+    align-items: center;
+  }
+  .cards {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .container {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 388px) {
+  .container {
+    margin: 20px 0;
+    align-items: center;
+  }
+  .cards {
+    align-items: center;
+  }
+}

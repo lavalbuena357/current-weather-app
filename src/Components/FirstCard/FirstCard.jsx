@@ -27,9 +27,10 @@ function FirstCard() {
     <div className={style.container}>
       {firstCity && 
         <div className={style.cardCtn}>
-          <div onClick={() => handleClose(firstCity.id)} className={style.closeCtn}>
-            <IoTrash />
+          <div onClick={() => handleDetail(firstCity.id)} className={style.detailCtn}>
+            <MdReadMore />
           </div>
+          
           <div className={style.leftCtn}>
             <div className={style.nameCtn}>
               <MdPlace />
@@ -84,8 +85,8 @@ function FirstCard() {
               </div>
             </div>
           </div>
-          <div onClick={() => handleDetail(firstCity.id)} className={style.detailCtn}>
-            <MdReadMore />
+          <div onClick={() => handleClose(firstCity.id)} className={style.closeCtn}>
+            <IoTrash />
           </div>
         </div>
       }

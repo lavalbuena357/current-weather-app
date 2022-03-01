@@ -23,7 +23,7 @@ function SearchBar() {
   }
   
   return (
-    <div>
+    <div className={style.container}>
       <div className={style.formCtn}>
         <form onSubmit={handleAdd}>
           <input className={style.inputsearch} ref={cityRef} type="text" placeholder='Buscar ciudad por nombre...' required />
