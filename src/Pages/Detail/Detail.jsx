@@ -67,8 +67,8 @@ function Detail() {
           <p><MdRemoveRedEye />Visibilidad: {detail.visibility/1000}%</p>
           <p><GiWindpump />Viento: {detail.wind.speed}km/h</p>
           <p><IoSpeedometer />Presión: {detail.main.pressure}hPa</p>
-          <p><MdWater />Nivel del mar: {detail.main.sea_level}m</p>
-          <p><GiIsland />Nivel del suelo: {detail.main.grnd_level}m</p>
+          <p><MdWater />Nivel del mar: {detail.main.sea_level || "N/A"}m</p>
+          <p><GiIsland />Nivel del suelo: {detail.main.grnd_level || "N/A"}m</p>
         </div>
     </div>
   )

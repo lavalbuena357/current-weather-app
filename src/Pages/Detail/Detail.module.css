@@ -2,6 +2,7 @@
   display: flex;
   margin: 20px;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .backCtn {
@@ -137,4 +138,45 @@ background-color: #2a3850;
 .moreInfoCtn p svg {
   margin-right: 8px;
   font-size: 2rem;
+}
+
+@media only screen and (max-width: 656px) {
+  .container {
+    margin: 0;
+    flex-direction: column;
+  }
+  .backCtn {
+    width: 100%;
+    height: 50px;
+  }
+  .infoCtn {
+    justify-content: space-around;
+    align-items: center;
+  }
+  .moreInfoCtn {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+  }
+  .moreInfoCtn p {
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .moreInfoCtn p {
+    width: 100%;
+  }
+  .mainTempCtn svg {
+    font-size: 2rem;
+  }
+  .mainTempCtn p {
+    font-size: 4rem;
+  }
+  .infoCtn {
+    flex-direction: column;
+  }
+  .leftCtn {
+    margin-right: 0;
+  }
 }
