@@ -5,6 +5,7 @@
 .cardCtn {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .leftCtn {
@@ -12,6 +13,7 @@
   flex-direction: column;
   align-items: center;
   user-select: none;
+  padding-left: 10px;
 }
 
 .nameCtn {
@@ -57,11 +59,11 @@
 .cardSup, .cardInf {
   display: flex;
   background-color: #2a3850;
-  margin: 5px 20px;
+  margin: 5px 0 5px 20px;
   padding: 10px;
 }
 
-.block1, .block2, .block3, .block4 {
+.block1, .block2, .block3, .block4, .block5 {
   display: flex;
   align-items: center;
   margin: 0 5px;
@@ -73,11 +75,43 @@
   padding: 0 10px;
 }
 
-.block1 svg, .block2 svg, .block3 svg {
+.block1 svg, .block2 svg, .block3 svg, .block5 svg {
   margin-right: 15px;
   font-size: 1.2rem;
 }
 
 .block4 svg {
   font-size: 2.5rem;
+  margin-right: 10px;
+}
+
+.block4 {
+  width: 60%;
+}
+
+.detailCtn {
+  width: 35px;
+  background-color: rgb(23, 189, 1);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  position: absolute;
+  right: -35px;
+  top: 5px;
+  bottom: 5px;
+}
+
+.closeCtn {
+  width: 20px;
+  background-color: rgb(220, 13, 13);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -20px;
+  top: 5px;
+  bottom: 5px;
 }
