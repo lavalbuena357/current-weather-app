@@ -1,18 +1,35 @@
 import React from 'react'
 import style from './FirstCard.module.css'
 import { MdPlace, MdReadMore, MdRemoveRedEye } from "react-icons/md"
-import { IoWater, IoCloud, IoTrash } from "react-icons/io5"
+import { IoWater, IoCloud, IoTrash, IoSpeedometer } from "react-icons/io5"
 import { GiWindpump } from "react-icons/gi"
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux'
+import { cityDetail, firstCard, updateCities } from '../../Redux/actions'
+import { useNavigate } from 'react-router-dom'
 
 function FirstCard() {
 
   const firstCity = useSelector(state => state.fisrtCard)
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+  async function handleClose(id) {
+    await dispatch(updateCities(id))
+    await dispatch(firstCard())
+  }
+
+  async function handleDetail(id) {
+    await dispatch(cityDetail(id))
+    navigate(`/${id}`)
+  }
 
   return (
     <div className={style.container}>
       {firstCity && 
         <div className={style.cardCtn}>
+          <div onClick={() => handleClose(firstCity.id)} className={style.closeCtn}>
+            <IoTrash />
+          </div>
           <div className={style.leftCtn}>
             <div className={style.nameCtn}>
               <MdPlace />
@@ -58,8 +75,17 @@ function FirstCard() {
                   <p>{firstCity.wind.speed}km/h</p>
                 </div>
               </div>
-              
+              <div className={style.block5}>
+                <IoSpeedometer />
+                <div>
+                  <p>Presión</p>
+                  <p>{firstCity.main.pressure}hPa</p>
+                </div>
+              </div>
             </div>
+          </div>
+          <div onClick={() => handleDetail(firstCity.id)} className={style.detailCtn}>
+            <MdReadMore />
           </div>
         </div>
       }
